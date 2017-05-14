@@ -1,0 +1,103 @@
+.awesomplete [hidden] {
+    display: none;
+}
+.awesomplete .visually-hidden {
+    clip: rect(0px, 0px, 0px, 0px);
+    position: absolute;
+}
+.awesomplete {
+    display: block;
+    position: relative;
+    text-align: left;
+}
+.awesomplete > input {
+    background: hsla(0, 0%, 100%, 0.2) none repeat scroll 0 0;
+    border: 1px solid hsl(35, 80%, 60%);
+    border-collapse: separate;
+    border-radius: 0.3em;
+    box-shadow: 0.05em 0.1em 0.3em rgba(0, 0, 0, 0.3) inset;
+    display: block;
+    font: 2.67em Verdana;
+    padding: 0.1em 0.3em;
+    position: relative;
+    text-align: left;
+    text-shadow: inherit;
+    width: 98%;
+}
+.awesomplete > ul {
+    box-sizing: border-box;
+    left: 0;
+    list-style: outside none none;
+    max-width: 97%;
+    min-width: 97%;
+        font: 2.67em Verdana;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+}
+.awesomplete > ul:empty {
+    display: none;
+}
+.awesomplete > ul {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right bottom, white, hsla(0, 0%, 100%, 0.8)) repeat scroll 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.3em;
+    box-shadow: 0.05em 0.2em 0.6em rgba(0, 0, 0, 0.2);
+    margin: 0.2em 0 0;
+    text-shadow: none;
+}
+@supports (transform: scale(0)) {
+.awesomplete > ul {
+    transform-origin: 1.43em -0.43em 0;
+    transition: all 0.3s cubic-bezier(0.4, 0.2, 0.5, 1.4) 0s;
+}
+.awesomplete > ul[hidden], .awesomplete > ul:empty {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+    transition-timing-function: ease;
+}
+}
+.awesomplete > ul::before {
+    -moz-border-bottom-colors: inherit;
+    -moz-border-left-colors: inherit;
+    -moz-border-right-colors: inherit;
+    -moz-border-top-colors: inherit;
+    background: white none repeat scroll 0 0;
+    border-bottom: 0 none;
+    border-image: inherit;
+    border-left: inherit;
+    border-right: 0 none;
+    border-top: inherit;
+    content: "";
+    height: 0;
+    left: 1em;
+    padding: 0.4em;
+    position: absolute;
+    top: -0.43em;
+    transform: rotate(45deg);
+    width: 0;
+}
+.awesomplete > ul > li {
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    position: relative;
+}
+.awesomplete > ul > li:hover {
+    background: hsl(200, 40%, 80%) none repeat scroll 0 0;
+    color: black;
+}
+.awesomplete > ul > li[aria-selected="true"] {
+    background: hsl(205, 40%, 40%) none repeat scroll 0 0;
+    color: white;
+}
+.awesomplete mark {
+    background: hsl(65, 100%, 50%) none repeat scroll 0 0;
+}
+.awesomplete li:hover mark {
+    background: hsl(68, 100%, 41%) none repeat scroll 0 0;
+}
+.awesomplete li[aria-selected="true"] mark {
+    background: hsl(86, 100%, 21%) none repeat scroll 0 0;
+    color: inherit;
+}
